@@ -1,13 +1,13 @@
 
-use ExtUtils::MakeMaker;
+use inc::Module::Install;
 
 my
-$VERSION = do { my @r = (q$Revision: 1.6 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
-WriteMakefile(
-              NAME => 'Devel::Fail::Make',
-              VERSION => $VERSION,
-             );
+name('Devel-Fail-Make');
+version($VERSION);
+license('perl');
+WriteAll;
 
 # pure_all is needed by `make test`.
 sub MY::top_targets
