@@ -1,8 +1,10 @@
 
+# $Id: Makefile.PL,v 1.8 2007/04/22 02:56:20 Daddy Exp $
+
 use inc::Module::Install;
 
 my
-$VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 name('Devel-Fail-Make');
 version($VERSION);
