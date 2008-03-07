@@ -1,9 +1,12 @@
 --- 
 abstract: This distro causes an error during the `make` phase.
-author: Martin Thurn <mthurn@cpan.org>
+author: 
+  - Martin Thurn <mthurn@cpan.org>
+build_requires: 
+  Test::Simple: 0
 distribution_type: module
-generated_by: Module::Install version 0.67
-license: perl
+generated_by: Module::Install version 0.68
+license: Test::Pod::Coverage
 meta-spec: 
   url: http://module-build.sourceforge.net/META-spec-v1.3.html
   version: 1.3
@@ -12,4 +15,4 @@ no_index:
   directory: 
     - inc
     - t
-version: 1.010
+version: 1.013
