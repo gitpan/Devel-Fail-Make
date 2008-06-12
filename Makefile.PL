@@ -1,19 +1,17 @@
 
-# $Id: Makefile.PL,v 1.13 2008/03/07 00:18:31 Daddy Exp $
+# $Id: Makefile.PL,v 1.15 2008/06/12 13:44:22 Martin Exp $
 
 use inc::Module::Install;
 
-my
-$VERSION = do { my @r = (q$Revision: 1.13 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+our
+$VERSION = do { my @r = (q$Revision: 1.15 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
-name('Devel-Fail-Make');
+all_from('lib/Devel/Fail/Make.pm');
+print STDERR " DDD VERSION=$VERSION=\n";
+test_requires('Test::Pod');
+test_requires('Test::Pod::Coverage');
+test_requires('Test::Simple');
 version($VERSION);
-abstract('This distro causes an error during the `make` phase.');
-author('Martin Thurn <mthurn@cpan.org>');
-license('perl');
-build_recommends('Test::Pod');
-build_recommends('Test::Pod::Coverage');
-build_requires  ('Test::Simple');
 WriteAll;
 
 # pure_all is needed by `make test`.
