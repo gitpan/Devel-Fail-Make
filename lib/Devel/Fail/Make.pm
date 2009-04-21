@@ -1,5 +1,5 @@
 
-# $Id: Make.pm,v 1.5 2008/06/12 13:29:44 Martin Exp $
+# $Id: Make.pm,v 1.16 2009/04/21 22:21:53 Martin Exp $
 
 =head1 NAME
 
@@ -30,7 +30,7 @@ use strict;
 use warnings;
 
 my
-$VERSION = do { my @r = (q$Revision: 1.5 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 1.16 $ =~ /\d+/g); sprintf "%d."."%03d" x $#r, @r };
 
 1;
 
